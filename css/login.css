@@ -1,0 +1,160 @@
+main {
+	width: 400px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+main #loginTag {
+	border-bottom: 1px solid #ccc;
+}
+main #loginTag span {
+	cursor: pointer;
+	display: inline-block;
+	line-height: 50px;
+	width: 49%;
+	text-align: center;
+}
+#inputBg {
+	width: 100%;
+	margin: 25px 0px;
+	text-align: center;
+}
+#accountLoginInput input {
+	padding-left: 2%;
+	height: 35px;
+	width: 78%;
+	margin: 5px 0px;
+}
+#phoneLoginInput {
+	display: none;
+}
+#phoneLoginInput input{
+	padding-left: 2%;
+	height: 35px;
+	width: 78%;
+	margin: 5px 0px;
+}
+#phoneCheck {
+	width: 78%;
+	margin: 0 auto;
+}
+#phoneCheck input {
+	padding-left: 2%;
+	height: 35px;
+	width: 60%;
+	margin-left: -10px;
+}
+#phoneLoginInput span {
+	padding-bottom: 3px;
+	line-height: 38px;
+	display: inline-block;
+	width: 40%;
+	margin: 4px -8px;
+	background: red;
+	color: #fff;
+}
+#loginOption {
+	width: 80%;
+	margin: 5px auto;
+}
+#loginOption span:first-child {
+	float: left;
+}
+#loginOption span:last-child {
+	float: right;
+}
+#loginAndRegister {
+	width: 80%;
+	margin: 0px auto;
+	padding: 15px 0px;
+	/*border: 1px solid black;*/
+	border-bottom: 1px solid #ccc;
+}
+/*登录按钮*/
+#loginButton {
+	display: block;
+	width: 100%;
+	background: red;
+	text-align: center;
+	border-radius: 2px;
+	padding: 15px 0px;
+	color: #fff;
+}
+#loginAndRegister a {
+	display: block;
+	text-decoration: none;
+	color: gray;
+	padding: 10px 0px;
+	float: right;
+}
+#loginAndRegister:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*其他登录方法*/
+#otherLogin {
+	width: 80%;
+	margin:  0 auto;
+}
+#otherLogin span:first-child {
+	line-height: 40px;
+	font-size: 12px;
+	color: #ccc;
+}
+#oterhLoginLogo {
+	display: inline-block;
+
+}
+#oterhLoginLogo a {
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin: 0px 5px;
+}
+#oterhLoginLogo a:nth-last-child(4) {
+	background: url("../images/login/qq.png");
+}
+#oterhLoginLogo a:nth-last-child(3) {
+	background: url("../images/login/weixin.png");
+}
+#oterhLoginLogo a:nth-last-child(2) {
+	background: url("../images/login/sina.png");
+}
+#oterhLoginLogo a:nth-last-child(1) {
+	background: url("../images/login/alipay.png");
+}
+
+/*更多按钮*/
+#moreBotton {
+	cursor: pointer;
+	line-height: 40px;
+	float: right;
+	position: relative;
+	padding-right: 15px;
+	font-size: 12px;
+	color: #ccc;
+}
+/*下三角*/
+#downArrow {
+	position: absolute;
+	top: 16px;
+	right: 0px;
+	border: 5px solid transparent;
+	border-top: 5px solid #ccc;
+}
+#hiddenedOtherLogin {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	display: none;
+	width: 70%;
+	padding-left: 45px; 
+	text-align: center;
+}
+#hiddenedOtherLogin a {
+	font-size: 14px;
+	padding-right: 10px;
+	text-decoration: none;
+}

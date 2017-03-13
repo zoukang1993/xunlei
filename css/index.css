@@ -1,0 +1,417 @@
+/**********************************************************************************
+*		姓名：杨明益
+*		日期：2017年1月17日
+**********************************************************************************/
+
+
+
+body,header,div,h1,a,ul,li,p,footer,span {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #ccc;
+	overflow: hidden;
+}
+
+/*************************************************************
+*
+*					头部导航栏样式
+*
+**************************************************************/
+
+
+header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+/*头部左侧logo*/
+header h1 {
+	width: 142px;
+	height: 64px;
+	float: left;
+	margin: 12px 0 0 34px;
+}
+header h1 .logo {
+	width: 100%;
+}
+
+/*头部右侧导航列表*/
+header .nav-list {
+	width: 486px;
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+header .nav-list > li {
+	width: 162px;
+	max-width: 33.333%;
+	height: 84px;
+	display: block;
+	float: left;
+}
+
+header .nav-list > li > a {
+	width: 136px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	margin: 23px auto;
+	text-decoration: none;
+	display: block;
+}
+header .nav-list > li > a:hover {
+	line-height: 34px;
+	box-sizing: border-box;
+	border: 2px solid #fff;
+	color: #fff;
+}
+.nav-list > li > a > span {
+	width: 28px;
+	height: 20px;
+	vertical-align: text-bottom;
+	background: red;
+	display: inline-block;
+	background: url(../img/head_spr.png) no-repeat;
+}
+.nav-list li:nth-of-type(1)  span {
+	background-position: 0 0;
+}
+.nav-list li:nth-of-type(2)  span {
+	background-position: -55px 0;
+}
+.nav-list li:nth-of-type(3) > a > span {
+	background-position: 0 -23px;
+}
+
+/*更多按钮*/
+header .more {
+	position: relative;
+}
+header .nav-more-list {
+	width: 164px;
+	height: 1000px;
+	padding-top: 90px;
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0;
+	right: -164px;
+	transition: right .25s linear;
+	z-index: -1;
+}
+/*鼠标悬停在“更多”按钮上是二级子菜单从右边框外向内弹出*/
+header .more:hover .nav-more-list {
+	right: 0;
+}
+header .nav-more-list > li {
+	text-align: center;
+	font-size: 18px;
+	line-height: 64px;
+	list-style: none;
+}
+header .nav-more-list > li a {
+	color: #ddd;
+	text-decoration: none;
+}
+header .nav-more-list > li a:hover {
+	color: #fff;
+}
+
+
+/*项目符*/
+header .list-style {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: url(../img/head_spr.png) no-repeat;
+	background-position: -36px 0px;
+	display: block;
+	position: absolute;
+	top: 116px;
+	left: 20px;
+	display: none;
+}
+
+
+/*************************************************************
+*
+*					中间内容样式
+*
+**************************************************************/
+
+		/*外层div公共样式及背景图*/
+.bg {
+	width: 100vw;
+	height: 100vh;
+	background-attachment: fixed;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation-fill-mode: both;
+	transition: opacity 1s linear;
+}
+.larger {
+	width: 110vw;
+	height: 110vh;
+	top: -5vh;
+	left: -5vw;
+}
+.bg-app {
+	background: url(../img/bg_xnet.jpg) no-repeat center center;
+	background-size: cover;
+	display: block;
+	opacity: 1;
+}
+.bg-vip {
+	background: url(../img/bg_member.jpg) no-repeat center center;
+	background-size: cover;
+	display: block;
+	opacity: 0;
+}
+.bg-video {
+	background: url(../img/bg_xav.jpg) no-repeat center center;
+	background-size: cover;
+	display: block;
+	opacity: 0;
+}
+
+
+.content {
+	width: 80vw;
+	height: 100vh;
+	text-align: center;
+	border-top: 1px solid transparent;
+	margin: 0 auto;
+	color:#fff;
+	overflow: hidden;
+}
+
+		/*文字内容样式*/
+.con-video > p,
+.con-vip > p,
+.con-app > p {
+	letter-spacing: 10px;
+	overflow: hidden;
+}
+.content > p {
+	white-space: nowrap;
+}
+.con-app > p {
+	font-size: 38px;
+	margin-top: 80px;
+	transition: all 1s linear;
+}
+.con-vip > p {
+	font-size: 42px;
+	margin-top: 180px;
+	transition: all 1s linear;
+}
+.con-video > p {
+	font-size: 34px;
+	margin-top: 230px;
+	transition: all 1s linear;
+}
+
+		/*文字下方按钮*/
+.con-video > div,
+.con-vip > div,
+.con-app > div {
+	width: 386px;
+	margin: 0 auto;
+}
+/*清除浮动*/
+.con-video > div:after,
+.con-vip > div:after,
+.con-app > div:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+/*按钮样式*/
+.con-video a,
+.con-vip a,
+.con-app a {
+	width: 138px;
+	height: 46px;
+	line-height: 46px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+	border: 1px solid #ccc;
+	display: block;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+	background: transparent;
+	z-index: 5;
+	opacity: 1;
+	transition: opacity 1s linear,
+				color .2s linear;
+}
+.con-app a {
+	margin: 20px 24px;
+	float: left;
+	opacity: 0;
+}
+.con-video a,
+.con-vip a {
+	margin: 30px auto 0 auto;
+	opacity: 0;
+}
+
+/*鼠标悬停到按钮上样式动态变化*/
+.content a:hover {
+	color: #444;
+}
+.btn::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	background: #eee;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: left bottom;
+	transform: rotate(-90deg);
+	transition: all .2s linear;
+	z-index: -1;
+}
+.btn:hover::after {
+	width: 180px;
+	height: 46px;
+	transform: rotate(0deg);
+}
+
+
+
+
+
+
+/*切换按钮*/
+.tab {
+	width: 204px;
+	position: absolute;
+	top: calc(100vh - 130px);
+	left: calc(50vw - 102px);
+	transition: top .2s linear;
+	z-index: 9;
+}
+.tab > a {
+	width: 52px;
+	height: 56px;
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	
+	background-size: 1000%;
+}
+/*切换按钮背景图*/
+.app {
+	margin-right: 16px;
+	background: url(../img/ic_spr.png) no-repeat;
+	background-position: 4px 0px;
+}
+.vip {
+	margin: 0 8px;
+	background: url(../img/ic_spr.png) no-repeat;
+	background-position: -151px 0px;
+}
+.video {
+	background: url(../img/ic_spr.png) no-repeat;
+	background-position: -282px 0px;
+	margin-left: 16px;
+}
+
+/*滑动条*/
+.bar {
+	width: inherit;
+	height: 2px;
+	border-radius: 2px;
+	background: rgba(192,192,192,.4);
+	clear: both;
+	position: relative;
+}
+.active-bar {
+	width: 52px;
+	height: inherit;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation-fill-mode: both;
+	transition: left .1s linear;
+}
+
+
+/*************************************************************
+*
+*						底部样式
+*
+**************************************************************/
+
+
+footer {
+	width: 100%;
+	height: 85px;
+	text-align: center;
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	transition: top .2s linear;
+}
+.footer {
+	transition: top .2s linear;
+	top: calc(100vh - 85px);
+}
+footer a {
+	color: #aaa;
+	text-decoration: none;
+}
+footer p {
+	color: #aaa;
+	font-size: 12px;
+	line-height: 18px;
+}
+footer div > a {
+	width: 64px;
+	height: 33px;
+	font-size: 12px;
+	line-height: 15px;
+	display: inline-block;
+	position: relative;
+	padding: 5px 5px 0 40px;
+	margin-top: 5px;
+	margin-right: 8px;
+	border: 1px solid #fff;
+}
+footer div > a:hover {
+	text-decoration: underline;
+}
+footer div > a > img {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+
+
+
+/*当屏幕宽度小于768PX时，中间的内容宽度为可视窗口宽度*/
+
+@media screen and (max-width:768px) {
+	.content {
+		width: 100vw;
+	}
+}
